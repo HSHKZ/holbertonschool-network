@@ -1,16 +1,7 @@
 #!/usr/bin/env bash
-# Define the path to the hosts file
-HOSTS_FILE="/etc/hosts"
-
-# Backup the existing hosts file
-sudo cp "$HOSTS_FILE" "$HOSTS_FILE.bak"
-
-# Add the custom entries to the hosts file
-sudo bash -c "cat <<EOF >> $HOSTS_FILE
-127.0.0.2   localhost
-8.8.8.8     facebook.com
-EOF"
-
-# Display the modified hosts file to verify changes
-echo "Modified /etc/hosts:"
-cat "$HOSTS_FILE"
+# Bash script that changes IP
+echo "Updating the /etc/hosts file..."
+{
+    echo "127.0.0.2   localhost"
+    echo "8.8.8.8     facebook.com"
+} | sudo tee /etc/hosts > /dev/null
