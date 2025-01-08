@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Task: 4. TCP and UDP ports
+ss -tulnpx | awk 'NR>1 {print $1, $5, $7}'
