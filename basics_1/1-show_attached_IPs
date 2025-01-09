@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Show the IPs attached to the host
-ifconfig | grep "inet" | awk '{print $2}'
+# Show all active IPv4 IPs attached to the host
+
+ifconfig | grep -w "inet" | awk '{print $2}'
