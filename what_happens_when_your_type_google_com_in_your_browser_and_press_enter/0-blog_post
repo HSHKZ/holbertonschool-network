@@ -1,0 +1,23 @@
+https://www.linkedin.com/feed/update/urn:li:activity:7285588595619299328/
+
+-> What Happens When You Type https://www.google.com in Your Browser and Press Enter?
+
+When you type a URL and press Enter, a series of events occurs to load the requested page:
+
+DNS Request: The domain is resolved to an IP address using browser, OS, or ISP DNS caches. If not cached, a recursive lookup is performed to contact authoritative servers.
+
+TCP/IP: A connection is established with the server through a 3-way handshake (SYN, SYN-ACK, ACK) for reliable data transfer.
+
+Firewall: Client- and server-side firewalls check packets for security, blocking malicious traffic and allowing valid requests.
+
+HTTPS/SSL: An SSL/TLS handshake encrypts the communication. The server’s certificate is validated, and a secure session key is generated.
+Load Balancer: Traffic is distributed across servers to optimize performance and reliability, ensuring only healthy servers are used.
+
+Web Server: A web server (e.g., Nginx) handles static content and routes dynamic requests to the application server.
+
+Application Server: The application server processes dynamic content, performing backend logic and handling database interactions.
+
+Database: Queries retrieve or update data, often using caching systems like Redis for frequent requests.
+Response and Rendering: The response is sent back to the browser. The browser parses HTML, loads additional resources (CSS, JS), and renders the page.
+
+This entire process happens in milliseconds, demonstrating the efficiency and complexity of web infrastructure.
